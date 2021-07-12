@@ -167,7 +167,7 @@ function Invoke-Serialization {
     )
 
     PROCESS {
-        return ($Data | ConvertTo-Json -Compress)
+        return (ConvertTo-Json @($Data) -Compress)
     }
 
 }
