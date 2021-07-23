@@ -75,7 +75,7 @@ function Invoke-Endpoint {
         # Return to client
         try {
             # Filter argument based on HTTP method
-            if ($Request.HttpMethod -eq "GET") {
+            if ($Request.HttpMethod -eq "GET" -or $Request.HttpMethod -eq "DELETE") {
                 $Data = $Endpoint.Action.Invoke((Resolve-QueryString -URL $Request.RawUrl))
             }
             elseif ($RequestBody.Length -ge 1) {
