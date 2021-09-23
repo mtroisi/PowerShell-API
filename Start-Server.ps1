@@ -4,7 +4,7 @@
     [String]$Path = "/"
 )
 
-Import-Module .\Modules\Processor.psm1
+Import-Module $PSScriptRoot\Modules\Processor.psm1
 
 $Listener = New-Object System.Net.HttpListener
 $Listener.Prefixes.Add("http://" + $Hostname + ":" + $Port + $Path)

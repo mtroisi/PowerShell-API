@@ -1,4 +1,4 @@
-﻿Import-Module .\Modules\Router.psm1
+﻿Import-Module $PSScriptRoot\Router.psm1
 function Resolve-Endpoint {
     
     param (
